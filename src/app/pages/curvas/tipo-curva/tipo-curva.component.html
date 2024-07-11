@@ -4,11 +4,10 @@
       <div class="col-sm-12">
         <div class="card">
           <div class="card-header">
-            Catalogo de Canales
+            <h4 class="mb-0 font-weight-bold text-primary text-shadow">Tipo de curva</h4>
             <div class="float-right">
-              <button class="btn btn-primary mr-2" >Sincronizar</button>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#agregarCurvaModalLabel">Agregar Curva</button>
 
-              <button class="btn btn-primary" data-toggle="modal" data-target="#agregarCanalModalLabel">Agregar Canal</button>
             </div>
           </div>
           <div class="card-body">
@@ -16,8 +15,7 @@
               <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">Identificador de Canal</th>
-                    <th scope="col">Nombre</th>
+                    <th scope="col">Identificador de Curva</th>
                     <th scope="col">Descripción</th>
                     <th scope="col">Estado</th>
                     <th scope="col">Acciones</th>
@@ -25,44 +23,35 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>001Ret</td>
-                    <td>Retail</td>
-                    <td>Retail</td>
+                    <td>001Adidas</td>
+                    <td>Zapatos Adidas</td>
                     <td>
                       <input type="checkbox" checked>
                     </td>
                     <td>
-                      <button class="btn btn-md btn-warning mr-1">Editar</button>
-                      <button class="btn btn-md btn-danger">Eliminar</button>
+                      <button class="btn btn-md btn-warning mr-1" (click)="goToPage('Zapatos Adidas')">Agregar Tallas</button>
                     </td>
                   </tr>
                   <tr>
-                    <td>002CC</td>
-                    <td>Cuenta Clave</td>
-                    <td>Cuenta Clave</td>
-
+                    <td>002Nike</td>
+                    <td>Zapatos Nike</td>
                     <td>
                       <input type="checkbox" checked>
                     </td>
                     <td>
-                      <button class="btn btn-md btn-warning mr-1">Editar</button>
-                      <button class="btn btn-md btn-danger">Eliminar</button>
+                      <button class="btn btn-md btn-warning">Agregar Tallas</button>
                     </td>
                   </tr>
                   <tr>
-                    <td>003CM</td>
-                    <td>Mayorista</td>
-                    <td>Canal Mayorista</td>
-
+                    <td>003RopAdidas</td>
+                    <td>Ropa Adidas</td>
                     <td>
                       <input type="checkbox" checked>
                     </td>
                     <td>
-                      <button class="btn btn-md btn-warning mr-1">Editar</button>
-                      <button class="btn btn-md btn-danger">Eliminar</button>
+                      <button class="btn btn-md btn-warning">Agregar Tallas</button>
                     </td>
                   </tr>
-         
                 </tbody>
               </table>
             </div>
@@ -73,11 +62,11 @@
   </div>
   
   <!-- Modal -->
-  <div class="modal fade" id="agregarCanalModalLabel" tabindex="-1" role="dialog" aria-labelledby="agregarCanalModalLabel" aria-hidden="true">
+  <div class="modal fade" id="agregarCurvaModalLabel" tabindex="-1" role="dialog" aria-labelledby="agregarCurvaModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="agregarCanalModalLabel">Agregar Canal</h5>
+          <h5 class="modal-title" id="agregarCurvaModalLabel">Agregar Curva</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -85,16 +74,13 @@
         <div class="modal-body">
           <form>
             <div class="form-group">
-              <label for="nombre">Identificador Canal</label>
-              <input type="text" class="form-control" id="identificadorRol" placeholder="Identificador Canal">
+              <label for="nombre">Identificador Curva</label>
+              <input type="text" class="form-control" id="identificadorRol" placeholder="Identificador Curva">
             </div>
-            <div class="form-group">
-              <label for="correo">Nombre</label>
-              <input type="text" class="form-control" id="name" placeholder="Nombre Canal">
-            </div>
+       
             <div class="form-group">
                 <label for="correo">Descripción</label>
-                <input type="text" class="form-control" id="descr" placeholder="Descripción">
+                <input type="text" class="form-control" id="year" placeholder="Descripción">
               </div>
         
     

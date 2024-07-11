@@ -1,1 +1,114 @@
-<p>grupo works!</p>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            Catalogo de Grupos
+            <div class="float-right">
+              <button class="btn btn-primary mr-2" >Sincronizar</button>
+
+              <button class="btn btn-primary" data-toggle="modal" data-target="#agregarGrupoModalLabel">Agregar Grupo</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Identificador de Grupo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>001Cal</td>
+                    <td>Calzado</td>
+                    <td>Calzado</td>
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                    <td>
+                      <button class="btn btn-md btn-warning mr-1">Editar</button>
+                      <button class="btn btn-md btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>002Rop</td>
+                    <td>Ropa</td>
+                    <td>Ropa</td>
+
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                    <td>
+                      <button class="btn btn-md btn-warning mr-1">Editar</button>
+                      <button class="btn btn-md btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>003Acc</td>
+                    <td>Accesorios</td>
+                    <td>Accesorios</td>
+
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                    <td>
+                      <button class="btn btn-md btn-warning mr-1">Editar</button>
+                      <button class="btn btn-md btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+         
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="agregarGrupoModalLabel" tabindex="-1" role="dialog" aria-labelledby="agregarGrupoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agregarGrupoModalLabel">Agregar Grupo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="nombre">Identificador Grupo</label>
+              <input type="text" class="form-control" id="identificadorRol" placeholder="Identificador Grupo">
+            </div>
+            <div class="form-group">
+              <label for="correo">Nombre</label>
+              <input type="text" class="form-control" id="name" placeholder="Nombre Grupo">
+            </div>
+            <div class="form-group">
+                <label for="correo">Descripción</label>
+                <input type="text" class="form-control" id="descr" placeholder="Descripción">
+              </div>
+        
+    
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="estado">
+              <label class="form-check-label" for="estado">Activo</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

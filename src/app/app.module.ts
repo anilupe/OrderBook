@@ -12,6 +12,7 @@ import {SharedModule} from './shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { BasicLoginComponent } from './pages/auth/login/basic-login/basic-login.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +20,13 @@ import { BasicLoginComponent } from './pages/auth/login/basic-login/basic-login.
     BreadcrumbsComponent,
     TitleComponent,
     AuthComponent,
-    BasicLoginComponent,
-    
-  ],
+    BasicLoginComponent
+      ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],

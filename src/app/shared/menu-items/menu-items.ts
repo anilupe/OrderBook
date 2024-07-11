@@ -55,10 +55,6 @@ const MENUITEMS = [
           {
             state: 'roles',
             name: 'Roles'
-          },
-          {
-            state: 'perfil',
-            name: 'Perfil de Usuario'
           }
         ] 
       },
@@ -126,8 +122,8 @@ const MENUITEMS = [
                 name:'Categorías'
               },
               {
-                state:'catalogo-curvas',
-                name:'Curvas'
+                state:'cluster',
+                name:'Cluster'
               }
              ]
            }
@@ -135,42 +131,37 @@ const MENUITEMS = [
       },
     ],
   },
-/*   {
-    label: 'Tables',
-    main: [
-      {
-        state: 'bootstrap-table',
-        short_label: 'B',
-        name: 'Bootstrap Table',
-        type: 'link',
-        icon: 'ti-receipt'
-      }
-    ]
-  }, */
+
   {
     label: 'Curvas ',
     main: [
       {
-        state: 'map',
-        short_label: 'M',
-        name: 'Zapatos',
-        type: 'link',
-        icon: 'fa fa-link'
+        state: 'curvas',
+        short_label: 'c',
+        name: 'Configuraciones',
+        type: 'sub',
+        icon: 'fa fa-cog',
+        children: [
+          {
+            state: 'tipo-curva',
+            type: 'link',
+            name: 'Tipo Curva',
+          }, {
+            state: 'tallas',
+            type: 'link',
+            name: 'Tallas',
+          }
+        ]
       },
       {
-        state: 'map',
-        short_label: 'M',
-        name: 'Ropa',
+        state: 'curvas',
+        short_label: 'c',
+        name: 'Definición de curvas',
         type: 'link',
-        icon: 'fa fa-male'
+        icon: 'fa fa-list',
+      
       },
-      {
-        state: 'map',
-        short_label: 'M',
-        name: 'Accesorios',
-        type: 'link',
-        icon: 'fa fa-asterisk'
-      }
+     
     /*   {
         state: 'authentication',
         short_label: 'A',

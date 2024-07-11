@@ -31,9 +31,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/ui-elements/advance/advance.module').then(m => m.AdvanceModule)
       },
       {
-        path: 'bootstrap-table',
-        loadChildren: () => import('./pages/ui-elements/tables/bootstrap-table/basic-bootstrap/basic-bootstrap.module').then(m => m.BasicBootstrapModule),
+        path: 'curvas',
+        loadChildren: () => import('./pages/curvas/curvas.module').then(m => m.CurvasModule),
       },
+    
       {
         path: 'map',
         loadChildren: () => import('./pages/map/google-map/google-map.module').then(m => m.GoogleMapModule),

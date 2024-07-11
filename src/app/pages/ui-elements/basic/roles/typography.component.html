@@ -16,6 +16,9 @@
                 <tr>
                   <th scope="col">Identificador de Rol</th>
                   <th scope="col">Rol</th>
+                  <th scope="col">Lectura</th>
+                  <th scope="col">Escritura</th>
+                  <th scope="col">Eliminar</th>
                   <th scope="col">Estado</th>
                   <th scope="col">Acciones</th>
                 </tr>
@@ -29,6 +32,15 @@
                     <input type="checkbox" checked>
                   </td>
                   <td>
+                    <input type="checkbox" checked>
+                  </td>
+                  <td>
+                    <input type="checkbox" checked>
+                  </td>
+                  <td>
+                    <input type="checkbox" checked>
+                  </td>
+                  <td>
                     <button class="btn btn-md btn-warning mr-1">Editar</button>
                     <button class="btn btn-md btn-danger">Eliminar</button>
                   </td>
@@ -38,7 +50,37 @@
                   <td>Usuario</td>
                
                   <td>
-                    <input type="checkbox">
+                    <input type="checkbox"checked>
+                  </td>
+                  <td>
+                    <input type="checkbox" >
+                  </td>
+                  <td>
+                    <input type="checkbox" checked>
+                  </td>
+                  <td>
+                    <input type="checkbox" checked>
+                  </td>
+                  <td>
+                    <button class="btn btn-md btn-warning mr-1">Editar</button>
+                    <button class="btn btn-md btn-danger">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>usuario02</td>
+                  <td>Usuario 2</td>
+               
+                  <td>
+                    <input type="checkbox"checked>
+                  </td>
+                  <td>
+                    <input type="checkbox" >
+                  </td>
+                  <td>
+                    <input type="checkbox" >
+                  </td>
+                  <td>
+                    <input type="checkbox" checked>
                   </td>
                   <td>
                     <button class="btn btn-md btn-warning mr-1">Editar</button>
@@ -67,20 +109,14 @@
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label for="nombre">Nombres y Apellidos</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+            <label for="nombre">Identificador Rol</label>
+            <input type="text" class="form-control" id="identificadorRol" placeholder="Identificador Rol">
           </div>
           <div class="form-group">
-            <label for="correo">Correo Electrónico</label>
-            <input type="email" class="form-control" id="correo" placeholder="Correo Electrónico">
+            <label for="correo">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="Nombre Rol">
           </div>
-          <div class="form-group">
-            <label for="rol">Rol</label>
-            <select class="form-control" id="rol">
-              <option value="admin">Administrador</option>
-              <option value="user">Usuario</option>
-            </select>
-          </div>
+  
           <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="estado">
             <label class="form-check-label" for="estado">Activo</label>

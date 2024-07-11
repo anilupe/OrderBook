@@ -1,1 +1,126 @@
-<p>centros works!</p>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            Catalogo de Centros
+            <div class="float-right">
+              <button class="btn btn-primary mr-2" >Sincronizar</button>
+
+              <button class="btn btn-primary" data-toggle="modal" data-target="#agregarCentroModalLabel">Agregar Centro</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Identificador de Centro</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>001QN</td>
+                    <td>Quicentro Norte</td>
+                    <td>Quicentro norte. Avenida Naciones Unidas entre, Av. 6 de Diciembre</td>
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                    <td>
+                      <button class="btn btn-md btn-warning mr-1">Editar</button>
+                      <button class="btn btn-md btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>001SC</td>
+                    <td>Scala</td>
+                    <td>Scala QHVF+5M6, E28C, Quito 170157</td>
+
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                    <td>
+                      <button class="btn btn-md btn-warning mr-1">Editar</button>
+                      <button class="btn btn-md btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>001SM</td>
+                    <td>San Marino</td>
+                    <td>San Marino. Av. Francisco de Orellana, Guayaquil 090512, Ecuador</td>
+
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                    <td>
+                      <button class="btn btn-md btn-warning mr-1">Editar</button>
+                      <button class="btn btn-md btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>001MS</td>
+                    <td>Mall del Sol</td>
+                    <td>Mall del Sol. 4º Pasaje 1 NE, Guayaquil 090513</td>
+
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                    <td>
+                      <button class="btn btn-md btn-warning mr-1">Editar</button>
+                      <button class="btn btn-md btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="agregarCentroModalLabel" tabindex="-1" role="dialog" aria-labelledby="agregarCentroModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agregarCentroModalLabel">Agregar Centro</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="nombre">Identificador Centro</label>
+              <input type="text" class="form-control" id="identificadorRol" placeholder="Identificador Centro">
+            </div>
+            <div class="form-group">
+              <label for="correo">Nombre</label>
+              <input type="text" class="form-control" id="name" placeholder="Nombre Centro">
+            </div>
+            <div class="form-group">
+                <label for="correo">Descripción</label>
+                <input type="text" class="form-control" id="descr" placeholder="Descripción">
+              </div>
+        
+    
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="estado">
+              <label class="form-check-label" for="estado">Activo</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

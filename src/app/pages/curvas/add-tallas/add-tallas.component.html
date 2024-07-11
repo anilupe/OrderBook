@@ -1,0 +1,69 @@
+<!-- Modal -->
+<div class="modal fade" id="agregarTallaModalLabel" tabindex="-1" role="dialog" aria-labelledby="agregarTallaModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="agregarTallaModalLabel">Agregar Talla</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="tallaSelect"><h6>Tallas Disponibles</h6></label>
+            <select class="form-control" id="descripcion" name="descripcion" [(ngModel)]="selectedTalla">
+              <option *ngFor="let talla of tallasDis" [value]="talla">{{ talla }}</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" (click)="agregarTalla()">Guardar Talla</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lista de Tallas -->
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0 font-weight-bold text-primary text-shadow">Tallas</h4>
+          <div class="float-right">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#agregarTallaModalLabel">Agregar Talla</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Identificador de Talla</th>
+                  <th scope="col">Talla</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let talla of tallas; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ talla }}</td>
+                  <td>
+                    <input type="checkbox" checked>
+                  </td>
+                  <td>
+                    <button class="btn btn-md btn-danger" (click)="eliminarTalla(i)">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

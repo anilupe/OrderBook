@@ -7,7 +7,7 @@ const routes: Routes = [
   {
   path: '',
     data: {
-      breadcrumb: 'Administración',
+      breadcrumb: 'Catálogos',
       status: false
     },
   children:[

@@ -9,9 +9,9 @@ const routes: Routes = [
     path: '',
     component: CurvaComponent,
     data: {
-      breadcrumb: 'Curvas',
+      breadcrumb: 'Cluster',
       icon: 'icofont-layout bg-c-blue',
-      breadcrumb_caption: 'Catalogo de curvas',
+      breadcrumb_caption: 'Catalogo de Cluster',
       status: true
     }
   }

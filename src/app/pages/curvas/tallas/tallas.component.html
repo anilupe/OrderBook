@@ -1,0 +1,78 @@
+<!-- Modal para agregar tallas -->
+<!-- Modal -->
+<div class="modal fade" id="agregarTallaModal" tabindex="-1" role="dialog" aria-labelledby="agregarTallaModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="agregarTallaModal">Agregar Talla</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="identificadorRol">Identificador Talla</label>
+            <input type="text" class="form-control" id="identificadorRol" name="identificadorRol" [(ngModel)]="nuevaTalla.id" placeholder="Identificador Talla">
+          </div>
+          <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="nuevaTalla.descripcion" placeholder="Descripción">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="estado" name="estado" checked>
+            <label class="form-check-label" for="estado">Activo</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" (click)="agregarTalla()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Lista de Tallas -->
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0 font-weight-bold text-primary text-shadow">Configuración de Tallas</h4>
+          <div class="float-right">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#agregarTallaModal">Agregar Talla</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Identificador de Talla</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let talla of tallas; let i = index">
+                  <td>{{ talla.id }}</td>
+                  <td>{{ talla.descripcion }}</td>
+                  <td>
+                    <input type="checkbox" [checked]="talla.activo" >
+                  </td>
+                  <td>
+                    <button class="btn btn-md btn-warning mr-1">Editar</button>
+                    <button class="btn btn-md btn-danger" (click)="eliminarTalla(i)">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

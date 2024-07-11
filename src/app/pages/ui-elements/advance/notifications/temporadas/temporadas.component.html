@@ -1,1 +1,107 @@
-<p>temporadas works!</p>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            Catalogo de Temporadas
+            <div class="float-right">
+              <button class="btn btn-primary mr-2" >Sincronizar</button>
+
+              <button class="btn btn-primary" data-toggle="modal" data-target="#agregarUsuarioModal">Agregar Temporada</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Identificador de Temporada</th>
+                    <th scope="col">Temporada</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Distribuidor</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ss001</td>
+                    <td>Spring Summer</td>
+                    <td>2024</td>
+                    <td>MEDEPORT</td>
+
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                    <td>
+                      <button class="btn btn-md btn-warning mr-1">Editar</button>
+                      <button class="btn btn-md btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fw001</td>
+                    <td>Fall Winter</td>
+                    <td>2024</td>
+                    <td>MEDEPORT</td>
+
+                    <td>
+                      <input type="checkbox">
+                    </td>
+                    <td>
+                      <button class="btn btn-md btn-warning mr-1">Editar</button>
+                      <button class="btn btn-md btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="agregarUsuarioModal" tabindex="-1" role="dialog" aria-labelledby="agregarTemporadaModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agregarTemporadaModalLabel">Agregar Temporada</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="nombre">Identificador Temporada</label>
+              <input type="text" class="form-control" id="identificadorRol" placeholder="Identificador Temporada">
+            </div>
+            <div class="form-group">
+              <label for="correo">Nombre</label>
+              <input type="text" class="form-control" id="name" placeholder="Nombre Temporada">
+            </div>
+            <div class="form-group">
+                <label for="correo">Fecha</label>
+                <input type="date" class="form-control" id="year" placeholder="Año Temporada">
+              </div>
+              <div class="form-group">
+                <label for="correo">Distribuidor</label>
+                <input type="text" class="form-control" id="distribuidor" placeholder="Distribuidor">
+              </div>
+    
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="estado">
+              <label class="form-check-label" for="estado">Activo</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

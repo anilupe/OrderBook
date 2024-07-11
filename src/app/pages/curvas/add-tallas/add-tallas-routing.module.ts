@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CentrosComponent } from './centros.component';
+import { AddTallasComponent } from './add-tallas.component';
 import { Routes, RouterModule } from '@angular/router';
+
 
 
 const routes: Routes = [
   {
     path: '',
-    component: CentrosComponent,
+    component: AddTallasComponent,
     data: {
-      breadcrumb: 'Cantros',
-      icon: 'icofont-layout bg-c-blue',
-      breadcrumb_caption: 'Catalogo de centros',
-      status: true
+      title: 'Tallas'
     }
   }
 ];
@@ -21,4 +19,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CentrosRoutingModule { }
+
+export class AddTallasRoutingModule { }

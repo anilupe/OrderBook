@@ -14,8 +14,8 @@ const routes: Routes = [
         path: 'categorias',
         loadChildren: () => import('./categoria/categoria.module').then(m => m.CategoriaModule)
       }, {
-        path: 'catalogo-curvas',
-        loadChildren: () => import('./curva/curva.module').then(m => m.CurvaModule)
+        path: 'cluster',
+        loadChildren: () => import('./cluster/curva.module').then(m => m.CurvaModule)
       }
      
     ]
