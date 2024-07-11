@@ -34,6 +34,10 @@ const routes: Routes = [
         path: 'curvas',
         loadChildren: () => import('./pages/curvas/curvas.module').then(m => m.CurvasModule),
       },
+      {
+        path: 'definicion-curvas',
+        loadChildren: () => import('./pages/curvas/definicion-curvas/definicion-curvas.module').then(m => m.DefinicionCurvasModule)
+      },
     
       {
         path: 'map',

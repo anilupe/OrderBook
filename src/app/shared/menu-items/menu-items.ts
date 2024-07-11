@@ -154,7 +154,7 @@ const MENUITEMS = [
         ]
       },
       {
-        state: 'curvas',
+        state: 'definicion-curvas',
         short_label: 'c',
         name: 'Definición de curvas',
         type: 'link',

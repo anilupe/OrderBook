@@ -25,6 +25,7 @@ const routes: Routes = [
             path: 'add-tallas',
             loadChildren: () => import('./add-tallas/add-tallas.module').then(m => m.AddTallasModule)
           },
+          
     ]
   }
 ];
