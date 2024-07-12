@@ -145,7 +145,7 @@ const MENUITEMS = [
           {
             state: 'tipo-curva',
             type: 'link',
-            name: 'Tipo Curva',
+            name: 'Grupo Tallas',
           }, {
             state: 'tallas',
             type: 'link',

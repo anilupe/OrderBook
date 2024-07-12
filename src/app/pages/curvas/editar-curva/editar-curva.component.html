@@ -1,1 +1,80 @@
-<hot-table [settings]="hotSettings"></hot-table>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0 font-weight-bold text-primary text-shadow">Listado de Curvas</h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mt-4">Grupo: <b>{{title}}</b></h6>
+                        <button class="btn btn-primary" data-toggle="modal"
+                            data-target="#agregCurvaModalLabelar">Agregar Tallas</button>
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-2 mr-4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div>
+                                <hot-table class="hot" [data]="dataset" height="450" [colWidths]="[150, 150, 150, 150, 100, 150, 150]"
+                                    [afterGetColHeader]="alignHeaders" [colHeaders]="colHeaders" [rowHeaders]="true"
+                                    [dropdownMenu]="true" [hiddenColumns]="hiddenColumns" [contextMenu]="true"
+                                    [multiColumnSorting]="true" [filters]="true" [afterGetColHeader]="alignHeaders"
+                                    [beforeRenderer]="addClassesToRows" [manualRowMove]="true" [autoWrapRow]="true"
+                                    licenseKey="non-commercial-and-evaluation">
+                                    <hot-column data="1"></hot-column>
+                                    <hot-column data="2"></hot-column>
+                                    <hot-column data="3"></hot-column>
+                                    <hot-column data="4" [allowInvalid]="false"></hot-column>
+                                    <hot-column data="5"></hot-column>
+                                    <hot-column data="6"></hot-column>
+                                    <hot-column data="7"></hot-column>
+                                    <!-- Aquí añadimos las columnas para las tallas seleccionadas -->
+                                    <ng-container *ngFor="let talla of seleccionadas">
+                                        <hot-column [data]="'talla-' + talla.name"></hot-column>
+                                    </ng-container>
+                                </hot-table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="agregCurvaModalLabelar" tabindex="-1" role="dialog" aria-labelledby="agregCurvaModalLabelar"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="agregCurvaModalLabelar">Agregar Tallas</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Seleccione las tallas:</label>
+                        <div *ngFor="let talla of tallas">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="{{ talla.id }}"
+                                    (change)="actualizarSeleccion(talla, $event)">
+                                <label class="form-check-label" [for]="talla.id">
+                                    {{ talla.name }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="guardarCambios()">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 
-@import "~handsontable/dist/handsontable.full.css";
-
 /* You can add global styles to this file, and also import other style files */
+@import '~handsontable/dist/handsontable.full.css';
+
 body {
   background-color: #f3f3f3;
   font-size: 0.875em;
@@ -22947,9 +22947,7 @@ body.dark {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
 }
-.custom-file-control:lang(en)::before {
-  content: "Browse";
-}
+
 .custom-file-control::before {
   position: absolute;
   top: -1px;
@@ -22965,7 +22963,5 @@ body.dark {
   border: 1px solid #ced4da;
   border-radius: 0 0.25rem 0.25rem 0;
 }
-.custom-file-control:lang(en):empty::after {
-  content: "Choose file...";
-}
+
 

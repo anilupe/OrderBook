@@ -25,7 +25,8 @@
               "node_modules/font-awesome-scss/scss/font-awesome.scss",
               "node_modules/ti-icons/css/themify-icons.css",
               "src/assets/icon/icofont/css/icofont.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/handsontable/dist/handsontable.full.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -90,6 +91,7 @@
               "node_modules/font-awesome-scss/scss/font-awesome.scss",
               "node_modules/ti-icons/css/themify-icons.css",
               "src/assets/icon/icofont/css/icofont.scss",
+              "node_modules/handsontable/dist/handsontable.full.min.css",
               "src/styles.scss"
             ],
             "assets": [

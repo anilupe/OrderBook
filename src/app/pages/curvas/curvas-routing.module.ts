@@ -19,7 +19,7 @@ const routes: Routes = [
           },
           {
             path: 'tipo-curva',
-            loadChildren: () => import('./tipo-curva/tipo-curva.module').then(m => m.TipoCurvaModule)
+            loadChildren: () => import('./grupo-tallas/tipo-curva.module').then(m => m.TipoCurvaModule)
           },
           {
             path: 'add-tallas',

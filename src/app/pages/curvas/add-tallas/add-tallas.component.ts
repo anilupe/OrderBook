@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./add-tallas.component.scss']
 })
 export class AddTallasComponent implements OnInit {
-  title: String
+  title='';
   selectedSize: string = '7.5';
   tallas: string[] = ['7', '7.5', '8',];
   tallasDis = ['7', '7.5', '8', 'S', 'M', 'L', '36', '38', '37', '9', '8.5', '9.5', '35'];
