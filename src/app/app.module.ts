@@ -11,6 +11,7 @@ import { AuthComponent } from './layout/auth/auth.component';
 import {SharedModule} from './shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { BasicLoginComponent } from './pages/auth/login/basic-login/basic-login.component';
+import { HotTableModule } from '@handsontable/angular'; // Asegúrate de importar HotTableModule
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { BasicLoginComponent } from './pages/auth/login/basic-login/basic-login.
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
+    HotTableModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],

@@ -25,6 +25,10 @@ const routes: Routes = [
             path: 'add-tallas',
             loadChildren: () => import('./add-tallas/add-tallas.module').then(m => m.AddTallasModule)
           },
+          {
+            path: 'editar-curva',
+            loadChildren: () => import('./editar-curva/editar-curva.module').then(m => m.EditarCurvaModule)
+          },
           
     ]
   }
